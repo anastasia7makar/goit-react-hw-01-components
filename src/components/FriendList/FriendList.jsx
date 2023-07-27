@@ -1,14 +1,18 @@
+import clsx from 'clsx';
 import PropTypes from 'prop-types';
-import css from '../FriendList/FriendList.module.css'
+
+import css from '../FriendList/FriendList.module.css';
 
 export const FriendList = ({ friends }) => (
-  <ul className={css.friend-list}>
+  <ul className={css.friendList}>
     {friends.map(({ id, isOnline, avatar, name }) => {
       return (
-        <li key={id} className="item">
-          <span className="status">{isOnline ? 'online' : 'offline'}</span>
-          <img className="avatar" src={avatar} alt="User avatar" width="48" />
-          <p className="name">{name}</p>
+        <li key={id} className={css.item}>
+          <span
+            className={clsx(css.status, isOnline ? css.online : css.offline)}
+          ></span>
+          <img className={css.avatar} src={avatar} alt="User avatar" width="48" />
+          <p className={css.name}>{name}</p>
         </li>
       );
     })}

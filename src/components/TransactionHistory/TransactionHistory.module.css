@@ -1,0 +1,20 @@
+.transactionHistory {
+  max-width: 768px;
+
+  margin: 24px auto;
+
+  table-layout: fixed;
+  width: 100%;
+  border-collapse: collapse;
+
+  font-size: 24px;
+  line-height: 1.36;
+
+  color: #373737;
+}
+
+.transactionHistory td {
+  padding: 12px;
+  border: solid 2px #87a6e2;
+  box-shadow: 1px 3px 9px #373737;
+}
